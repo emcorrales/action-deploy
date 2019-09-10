@@ -9,4 +9,4 @@ git config user.name "$INPUT_NAME"
 git add _site
 git commit -m "Deploy!"
 git subtree split -P _site -b gh-pages
-git push https://$GITHUB_ACTOR:$INPUT_TOKEN@$INPUT_URL gh-pages --force
+git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@$INPUT_URL gh-pages --force
