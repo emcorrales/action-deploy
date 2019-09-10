@@ -4,7 +4,7 @@ bundle install
 bundle exec jekyll build
 
 git config user.email $INPUT_EMAIL
-git config user.name $INPUT_NAME
+git config user.name "$INPUT_NAME"
 
 git add _site
 git commit -m "Deploy!"
