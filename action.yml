@@ -1,6 +1,9 @@
 name: 'Custom Jekyll Deployment'
 description: 'Build and deploy a Jekyll site with custom theme to Github Pages.'
 inputs:
+  token:
+    description: 'Github Token'
+    required: true
   name:
     description: 'The name of the committer'
     required: true
