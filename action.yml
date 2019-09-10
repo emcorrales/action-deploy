@@ -10,9 +10,6 @@ inputs:
   email:
     description: 'The email of the committer.'
     required: true
-  url:
-    description: 'Repository url'
-    required: true
   domain:
     description: 'Custom domain'
 
