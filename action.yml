@@ -20,3 +20,5 @@ inputs:
     description: 'Optional path to check out source code'
 runs:
   plugin: 'checkout'
+  using: 'docker'
+  image: 'Dockerfile'
