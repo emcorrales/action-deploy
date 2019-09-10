@@ -16,6 +16,8 @@ inputs:
   url:
     description: 'Repository url'
     required: true
+  domain:
+    description: 'Custom domain'
 
 runs:
   using: 'docker'
