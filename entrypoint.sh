@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -xe
 bundle install
 bundle exec jekyll build
 
