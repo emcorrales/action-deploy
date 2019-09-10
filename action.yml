@@ -1,12 +1,6 @@
 name: 'Checkout'
 description: 'Get sources from a GitHub repository.'
 inputs:
-  token:
-    description: 'Access token for clone repository'
-    required: true
-  actor:
-    description: 'The Github user doing the action.'
-    required: true
   name:
     description: 'The name of the committer'
     required: true
