@@ -1,6 +1,6 @@
 name: 'Checkout'
 description: 'Get sources from a GitHub repository.'
-inputs: 
+inputs:
   repository:
     description: 'Repository name'
   ref:
@@ -15,8 +15,8 @@ inputs:
   lfs:
     description: 'Whether to download Git-LFS files; defaults to false'
   fetch-depth:
-    description: 'The depth of commits to ask Git to fetch; defaults to no limit'  
+    description: 'The depth of commits to ask Git to fetch; defaults to no limit'
   path:
-    description: 'Optional path to check out source code'  
+    description: 'Optional path to check out source code'
 runs:
   plugin: 'checkout'
