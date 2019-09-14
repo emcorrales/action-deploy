@@ -10,10 +10,10 @@ This action will override the commits on your gh-pages branch. Please be sure th
 ## Inputs
 | Name               | Description                                                                                                                                            | Required | Sample Value                |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------|-----------------------------|
-| GITHUB_TOKEN       | A token to allow this action to perform git operations on your repo.                                                                                   | yes      | ${{ secrets.GITHUB_TOKEN }} |
-| GIT_COMMITER_NAME  | The Git commiter's name.                                                                                                                               | yes      | Emmanuel Corrales           |
-| GIT_COMMITER_EMAIL | The Git commiter's email.                                                                                                                              | yes      | contact@emcorrales          |
-| CUSTOM_DOMAIN      | The custom domain for your Github Pages. Use this if you want to use your own domain instead of the one provided by GitHub Pages(e.g. user.github.io). | no       | example.com                 |
+| github_token       | A token to allow this action to perform git operations on your repo.                                                                                   | yes      | ${{ secrets.GITHUB_TOKEN }} |
+| git_commiter_name  | The Git commiter's name.                                                                                                                               | yes      | Emmanuel Corrales           |
+| git_commiter_email | The Git commiter's email.                                                                                                                              | yes      | contact@emcorrales          |
+| custom_domain      | The custom domain for your Github Pages. Use this if you want to use your own domain instead of the one provided by GitHub Pages(e.g. user.github.io). | no       | example.com                 |
 ### Example Workflow
 ```yaml
 name: Deployment
