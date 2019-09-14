@@ -4,7 +4,7 @@ inputs:
   github_token:
     description: 'Github Token'
     required: true
-  git_commiter_name:
+  git_committer_name:
     description: 'The name of the committer.'
     required: true
   git_committer_email:
