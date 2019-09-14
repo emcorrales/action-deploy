@@ -1,17 +1,17 @@
 name: 'Custom Jekyll Deployment'
 description: 'Build and deploy a Jekyll site with custom theme to Github Pages.'
 inputs:
-  token:
+  github_token:
     description: 'Github Token'
     required: true
-  name:
-    description: 'The name of the committer'
+  git_commiter_name:
+    description: 'The name of the committer.'
     required: true
-  email:
-    description: 'The email of the committer.'
+  git_committer_email:
+    description: 'The email of the git committer.'
     required: true
-  domain:
-    description: 'Custom domain'
+  custom_domain:
+    description: 'Custom domain.'
 
 runs:
   using: 'docker'
