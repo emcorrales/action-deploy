@@ -32,8 +32,8 @@ jobs:
     - uses: actions/checkout@v1
     - uses: emcorrales/action-jekyll-deploy-gh-pages@v0.1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: Emmanuel Corrales
-        email: contact@emcorrales.com
-        domain: contact@emcorrales.com
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        git_commiter_name: Emmanuel Corrales
+        git_commiter_email: contact@emcorrales.com
+        custom_domain: contact@emcorrales.com
 ```
