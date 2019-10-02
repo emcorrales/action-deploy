@@ -12,6 +12,4 @@ git config user.email $INPUT_GIT_COMMITTER_EMAIL
 
 git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE add $MY_JEKYLL_SITE
 git commit -m "Deploy!"
-git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE push https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages --force
-
-
+git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE push origin gh-pages
