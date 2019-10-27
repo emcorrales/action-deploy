@@ -5,7 +5,7 @@ mkdir -p $MY_JEKYLL_SITE
 gem install bundler
 bundle install
 git clone --bare --branch=gh-pages https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages
-git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE checkout gh-pages
+git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE checkout -b gh-pages
 
 rm -rf $MY_JEKYLL_SITE/*
 JEKYLL_ENV=production bundle exec jekyll build -d $MY_JEKYLL_SITE
