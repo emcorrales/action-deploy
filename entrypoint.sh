@@ -1,5 +1,6 @@
 #! /bin/bash -xe
 MY_JEKYLL_SITE=my_jekyll_site
+mkdir $MY_JEKYLL_SITE
 
 gem install bundler
 bundle install
