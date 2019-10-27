@@ -7,7 +7,7 @@ bundle install
 
 git clone --bare https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages
 
-git branch -a | grep remotes/origin/gh-pagess
+git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE branch -a | grep remotes/origin/gh-pagess
 if [ $? -eq 0 ]; then
   git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE checkout gh-pages
 else
