@@ -1,4 +1,5 @@
-#! /bin/bash -xe
+#! /bin/bash
+set -xe
 MY_JEKYLL_SITE=$HOME/my_jekyll_site
 ghprepo() {
   git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE $@
@@ -10,11 +11,13 @@ gem install bundler
 bundle install
 
 git clone --bare https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages
-
+set +e
 ghprepo branch -a | grep remotes/origin/gh-pagess
 if [ $? -eq 0 ]; then
+  set -e
   ghprepo checkout gh-pages
 else
+  set -e
   ghprepo checkout -b gh-pages
 fi
 
