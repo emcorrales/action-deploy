@@ -11,6 +11,7 @@ gem install bundler
 bundle install
 
 git clone --bare https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages
+git fetch
 set +e
 ghprepo branch -a | grep remotes/origin/gh-pages | wc -l
 if [ $(ghprepo branch -a | grep remotes/origin/gh-pages | wc -l) -eq 1 ]; then
