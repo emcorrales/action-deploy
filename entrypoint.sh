@@ -1,8 +1,9 @@
 #! /bin/bash -xe
 MY_JEKYLL_SITE=/root/my_jekyll_site
+GH_PAGES_REPO=/root/gh-pages
 
 ghprepo() {
-  git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE $@
+  git --git-dir=$GH_PAGES_REPO --work-tree=$MY_JEKYLL_SITE $@
 }
 
 mkdir -p $MY_JEKYLL_SITE
@@ -10,7 +11,7 @@ mkdir -p $MY_JEKYLL_SITE
 gem install bundler
 bundle install
 
-git clone --bare https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages
+git clone --bare https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git $GH_PAGES_REPO
 
 ghprepo branch -a
 if [ $(ghprepo branch -a | grep gh-pages | wc -l) -gt 0 ]; then
