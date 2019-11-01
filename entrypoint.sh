@@ -1,6 +1,7 @@
 #! /bin/bash
 set -xe
-MY_JEKYLL_SITE=$HOME/my_jekyll_site
+MY_JEKYLL_SITE=/root/my_jekyll_site
+
 ghprepo() {
   git --git-dir=gh-pages --work-tree=$MY_JEKYLL_SITE $@
 }
