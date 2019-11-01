@@ -12,8 +12,8 @@ bundle install
 
 git clone --bare https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git gh-pages
 set +e
-ghprepo branch -a | grep remotes/origin/gh-pages | wc -l
-if [ $(ghprepo branch -a | grep gh-pages | wc -l) -gt 1 ]; then
+ghprepo branch -a
+if [ $(ghprepo branch -a | grep gh-pages | wc -l) -gt 0 ]; then
   set -e
   ghprepo checkout gh-pages
 else
