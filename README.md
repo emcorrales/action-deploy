@@ -2,10 +2,7 @@
 
 This action is meant for Jekyll sites that have custom themes because GitHub
 supports only a limited number of Jekyll Themes. This action builds your Jekyll
-site then force pushes it to your repo's gh-pages branch.
-
-## Warning!
-This action will override the commits on your gh-pages branch. Please be sure that you are willing to lose the current commits from your gh-pages branch.
+site then pushes it to your repo's gh-pages branch.
 
 ## Inputs
 | Name               | Description                                                                                                                                            | Required | Sample Value                |
