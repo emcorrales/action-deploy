@@ -23,6 +23,7 @@ fi
 rm -rf $MY_JEKYLL_SITE/*
 JEKYLL_ENV=production bundle exec jekyll build -d $MY_JEKYLL_SITE
 [ ! -z $INPUT_CUSTOM_DOMAIN ] && echo $INPUT_CUSTOM_DOMAIN > $MY_JEKYLL_SITE/CNAME
+touch $MY_JEKYLL_SITE/.nojekyll
 
 git config --global user.name "$INPUT_GIT_COMMITTER_NAME"
 git config --global user.email $INPUT_GIT_COMMITTER_EMAIL
